@@ -1,9 +1,11 @@
 import grpc
+
 import goods_pb2
 import goods_pb2_grpc
 
+
 def run():
-    channel = grpc.insecure_channel('150.158.80.68:50051')
+    channel = grpc.insecure_channel('localhost:50051')
     stub = goods_pb2_grpc.GoodsInfoStub(channel)
 
     # Add goods
